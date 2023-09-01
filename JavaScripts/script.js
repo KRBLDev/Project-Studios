@@ -30,26 +30,26 @@ window.addEventListener("load", () => {
     })
 })
 
-console.log()
+// Set the date and time to countdown to (September 11th, 2023)
+var countdownDate = new Date("2023-09-11 00:00:00").getTime();
 
-var countDownDate = new Date("Sept 11, 2023 00:00:00").getTime();
+// Update the countdown clock every second
+var countdownInterval = setInterval(function() {
+    var currentDate = new Date().getTime();
+    var timeRemaining = countdownDate - currentDate;
 
-var x = setInterval(function() {
+    // Calculate days, hours, minutes, and seconds
+    var days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
 
-  var now = new Date().getTime();
-
-  var distance = countDownDate - now;
-
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("CountdownNet").innerHTML = "Happy 1 Year Anniversary Project Studios";
-  }
-}, 1000);
+    // Display the countdown or anniversary message
+    var countdownElement = document.getElementById("countdown");
+    if (timeRemaining <= 0) {
+        clearInterval(countdownInterval);
+        countdownElement.innerHTML = "Happy 1 Year Anniversary Project Studios Developing Games For Others To Enjoy";
+    } else {
+        countdownElement.innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+    }
+}, 1000); // Update every second
