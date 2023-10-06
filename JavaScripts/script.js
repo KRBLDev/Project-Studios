@@ -31,7 +31,7 @@ window.addEventListener("load", () => {
 })
 
 // Set the date and time to countdown to (September 11th, 2023)
-var countdownDate = new Date("2023-09-11 00:00:00").getTime();
+var countdownDate = new Date("2024-01-01 00:00:00").getTime();
 
 // Update the countdown clock every second
 var countdownInterval = setInterval(function() {
@@ -48,7 +48,7 @@ var countdownInterval = setInterval(function() {
     var countdownElement = document.getElementById("countdown");
     if (timeRemaining <= 0) {
         clearInterval(countdownInterval);
-        countdownElement.innerHTML = "Happy 1 Year Anniversary Project Studios Developing Games For Others To Enjoy";
+        countdownElement.innerHTML = "Newy Year Countdown";
     } else {
         countdownElement.innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
     }
