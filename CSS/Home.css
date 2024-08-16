@@ -267,17 +267,30 @@ footer {
     margin: 0;
   }
 
-.Countdown {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+.wrapper2 {
+  backdrop-filter: blur(50px);
+  height: 80vh;
+  width: 80vw;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
 }
 
-.Countdown h1,
-.Countdown #countdown {
-    color: white;
+.wrapper2 h2 {
+  font-size: 40px;
+  margin: 0;
+  transform: translateY(50%);
+}
+
+.wrapper2 p {
+  font-size: 20px;
+  margin: 0;
+  transform: translateY(50%);
 }
 
 body::-webkit-scrollbar {
